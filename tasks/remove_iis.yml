@@ -1,0 +1,8 @@
+---
+# Remove Microsoft IIS
+- name: Remove IIS (Web-Server and Web-Common-Http)
+  ansible.windows.win_feature:
+    name:
+    - Web-Server
+    - Web-Common-Http
+    state: absent

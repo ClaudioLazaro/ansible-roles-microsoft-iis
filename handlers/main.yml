@@ -1,2 +1,9 @@
 ---
 # handlers file for ansible-roles-microsoft-iis
+- name: restart_iis
+  ansible.windows.win_service:
+    name: IIS
+    state: restarted
+    enabled: yes
+    action: restart
+    provider: windows
